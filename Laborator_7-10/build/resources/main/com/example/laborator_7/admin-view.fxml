@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laborator_7.Controller.AdminController">
+   <children>
+       <SplitPane dividerPositions="0.8359073359073359" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <items>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="userTableView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="663.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="tableColumnFirstName" prefWidth="75.0" text="First Name" />
+                        <TableColumn fx:id="tableColumnLastName" prefWidth="75.0" text="Last Name" />
+                        <TableColumn fx:id="tableColumnEmail" prefWidth="75.0" text="Email" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#handlePreviousPageUserButton" text="&lt;&lt;" />
+                  <Button layoutX="590.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleNextPageUserButton" text="&gt;&gt;" />
+                  <Button layoutX="218.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleSetPageSizeButton" text="Set page size" />
+                  <TextField fx:id="textPageSize" layoutX="340.0" layoutY="392.0" prefHeight="31.0" prefWidth="80.0" promptText="Page size" />
+                  <Label fx:id="currentPageLabel" layoutX="451.0" layoutY="397.0" text="0/0" />
+               </children>
+              </AnchorPane>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="138.0" prefWidth="665.0">
+                 <children>
+                     <HBox prefHeight="34.0" prefWidth="655.0" spacing="20.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
+                         <padding>
+                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                         </padding>
+                        <children>
+                            <Button mnemonicParsing="false" onAction="#handleAddUser" text="Add" />
+                            <Button mnemonicParsing="false" onAction="#handleDeleteUser" text="Delete" />
+                            <Button mnemonicParsing="false" onAction="#handleUpdateUser" text="Update" />
+                            <Button mnemonicParsing="false" onAction="#handleSearchUser" text="Search">
+                                <opaqueInsets>
+                                    <Insets />
+                                </opaqueInsets>
+                            </Button>
+                            <TextField fx:id="textSearchedEmail" prefHeight="31.0" prefWidth="138.0" promptText="Email" />
+                        <Button mnemonicParsing="false" onAction="#handleMessageButton" text="Messages" />
+                        <Button mnemonicParsing="false" onAction="#handleFriendshipsButton" text="Friendships" />
+                        </children>
+                     </HBox>
+                 </children>
+              </AnchorPane>
+          </items>
+       </SplitPane>
+   </children>
+</AnchorPane>
