@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<SplitPane dividerPositions="0.19230769230769232" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laborator_7.Controller.FriendshipController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="181.0">
+         <children>
+            <Button layoutX="26.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleAcceptButton" prefHeight="31.0" prefWidth="73.0" text="Accept" />
+            <Button layoutX="26.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleRejectButton" prefHeight="31.0" prefWidth="73.0" text="Reject" />
+            <Button layoutX="62.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleNextPageFriendshipButton" text="&gt;&gt;" />
+            <Button layoutX="9.0" layoutY="353.0" mnemonicParsing="false" onAction="#handlePreviousPageFriendshipButton" text="&lt;&lt;" />
+            <TextField fx:id="textPageSize" layoutX="21.0" layoutY="249.0" prefHeight="31.0" prefWidth="82.0" promptText="Page size" />
+            <Button layoutX="28.0" layoutY="206.0" mnemonicParsing="false" onAction="#handleSetPageSizeButton" text="Set size" />
+            <Label fx:id="currentPageLabel" layoutX="51.0" layoutY="315.0" text="1/1" />
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TableView fx:id="friendshipTableView" layoutX="130.0" layoutY="125.0" prefHeight="398.0" prefWidth="486.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="tableColumnFirstUser" prefWidth="125.0" text="First user" />
+                  <TableColumn fx:id="tableColumnSecondUser" prefWidth="125.0" text="Second user" />
+                  <TableColumn fx:id="tableColumnDate" prefWidth="125.0" text="Date" />
+                  <TableColumn fx:id="tableColumnStatus" prefWidth="125.0" text="Status" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

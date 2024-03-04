@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.23745819397993312" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="1138.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laborator_7.Controller.MessageController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="386.0" prefWidth="227.0">
+         <children>
+            <Button layoutX="144.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleSearchConversation" prefHeight="31.0" prefWidth="81.0" text="Search" />
+            <TextField fx:id="textEmail2" layoutX="110.0" layoutY="167.0" prefHeight="31.0" prefWidth="115.0" promptText="Email" />
+            <TextField fx:id="textEmail1" layoutX="110.0" layoutY="95.0" prefHeight="31.0" prefWidth="115.0" promptText="Email" />
+            <Label layoutX="29.0" layoutY="100.0" text="First user" AnchorPane.topAnchor="100.0" />
+            <Label layoutX="19.0" layoutY="172.0" text="Second user" />
+            <Button layoutX="27.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleViewAll" prefHeight="31.0" prefWidth="81.0" text="View all" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="433.0">
+         <children>
+            <TableView fx:id="tableViewMessages" layoutX="3.0" prefHeight="398.0" prefWidth="452.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="tableColumnFrom" prefWidth="151.0" text="From" />
+                <TableColumn fx:id="tableColumnTo" prefWidth="170.0" text="To" />
+                  <TableColumn fx:id="tableColumnMessage" minWidth="0.0" prefWidth="210.0" text="Message" />
+                  <TableColumn fx:id="tableColumnDate" prefWidth="170.0" text="Date" />
+                  <TableColumn fx:id="tableColumnReply" prefWidth="157.0" text="ReplyMessage" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
